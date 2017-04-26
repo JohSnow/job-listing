@@ -22,31 +22,31 @@
 //---------Navbar---------
 
 .navbar-default {
-    background-color: #212121;
-    border-color: #212121;
+    background-color: #4DD0E1;
+    border-color: #4DD0E1;
     margin-bottom: 0;
     border-radius: 0;
 }
 
 .navbar-default .navbar-brand {
-    color: #EF6C00;
+    color: #FAFAFA;
     padding: 10px 15px;
     line-height: 30px;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: #FF6F00;
+    color: #E0E0E0;
     background-color: transparent;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #EF6C00;
+    color: #FAFAFA;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #FF6F00;
+    color: #E0E0E0;
     background-color: transparent;
 }
 
@@ -136,7 +136,7 @@ footer {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #233140;
+    background-color: #80DEEA;
 }
 
 //---------panel style----------
