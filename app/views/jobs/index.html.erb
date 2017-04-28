@@ -31,10 +31,10 @@
 
           <thead>
                 <tr>
-                  <td>职缺</td>
-                  <td>薪资下限</td>
-                  <td>薪资上限</td>
-                  <td>刊登时间</td>
+                  <td>职位</td>
+                  <td>工作地点</td>
+                  <td>薪资待遇</td>
+                  <td>发布日期</td>
                 </tr>
 
           </thead>
@@ -45,7 +45,7 @@
               <%= link_to(job.title, job_path(job)) %>
             </td>
             <td>
-              <%= job.wage_lower_bound %>
+              <%= job.job_location %>
             </td>
             <td>
               <%= job.wage_upper_bound %>

@@ -2,12 +2,13 @@
 
 <%= simple_form_for @job do |f| %>
 
-<%= f.input :title %>
-<%= f.input :description %>
-<%= f.input :wage_lower_bound, :label => "薪资下限" %>
-<%= f.input :wage_upper_bound, :label => "薪资上限" %>
-<%= f.input :contact_email %>
-<%= f.input :is_hidden %>
+<%= f.input :title, :label => "职位" %>
+<%= f.input :job_location, :label => "工作地点" %>
+<%= f.input :wage_upper_bound, :label => "薪资待遇" %>
+<%= f.input :description, :label => "职位介绍" %>
 
-  <%= f.submit "Submit" %>
+<%= f.input :contact_email, :label => "企业邮箱"%>
+<%= f.input :is_hidden, :label => "隐藏职位"%>
+
+  <%= f.submit "提交", class:"btn btn-danger"%>
 <% end %>
