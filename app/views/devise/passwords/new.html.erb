@@ -4,11 +4,11 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :email, :label => "邮箱", required: true, autofocus: true %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
+    <%= f.button :submit, "发送重置密码" %>
   </div>
 <% end %>
 
