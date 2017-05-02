@@ -9,8 +9,8 @@
         <hr>
 
         <%= simple_form_for [@job, @resume] do |f| %>
-          <%= f.input :content %>
-          <%= f.input :attachment %>
+          <%= f.input :content, :label => "自我推荐" %>
+          <%= f.input :attachment, :label => "简历附件" %>
 
           <%= f.submit "送出" %>
         <% end %>
