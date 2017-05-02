@@ -1,64 +1,215 @@
-<div class="col-md-12">
-   <div class="row box">
-     <div class="box-inner col-md-6 col-md-offset-3">
-       <h1 class="title">24K Job </h1>
-       <p class="slogan">24K Job 是专为程序员打造的高薪求职网站
-         <br>
-         让程序员找到适合的发挥平台
-         <br>
-         凭借自己的努力和天份成为——人生赢家！
-       </p>
-       <p class="lead">
-         <%= link_to '马上应聘', jobs_path, class: 'btn btn-danger btn-lg' %>
-       </p>
-     </div>
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <body>
+    <div id="h">
+    <div class="container">
+      <div class="row">
+  <!-- ********** HEADER ********** -->
+      <!-- <div class="row"> -->
+        <div class="col-md-10 col-md-offset-1 mt">
+          <center> <img class="mb" height="96" src='<%= image_url 'logo.png' %>' ></center>
+          <center><h1 class="mb">找好工作从 J.W 开始</h1></center>
+          <center><h3>J.W 一家提供高薪就业机会的招聘网站</h3></center>
+          <div id="openButton">
+            <center><%= link_to("开启J.W", jobs_path) %></center>
+          </div>
+        </div>
+      </div><!-- </div> -->
+    </div><!--/container -->
+  </div><!--/h -->
+
+<!--- three big advantages  --->
+
+  <div class="section-block" id="underneath">
+  <div class="container">
+                  <h2>J.W 优势</h2>
+                  <div class="decorate-line"></div>
+  <div class="banner-bottom-grids">
+  <div class="col-md-4 banner-bottom-grid red">
+  <img src="<%= image_url 'productivity.png' %>" alt="">
+  <p class=text-muted style="text-align:center;padding:30px 0px;">高效沟通——专人专线一路协助，直至您找到满意的工作</p>
+  </div>
+
+  <div class="col-md-4 banner-bottom-grid">
+  <img src="<%= image_url 'clarity.png' %>" alt="">
+  <p class=text-muted style=" text-align:center;padding:30px 0px;">精准推荐——根据Google大数据分析，智能筛选适合您的工作 </p>
+  </div>
+
+  <div class="col-md-4 banner-bottom-grid green">
+  <img src="<%= image_url 'peace2.png' %>" alt="">
+  <p class=text-muted style="text-align:center;padding:30px 0px;">高薪平台——高端、高薪平台专为高成长的你！</p>
+  </div>
+
+  <div class="clearfix"> </div>
+  </div>
    </div>
- </div>
+   </div>
 
- <div class="content-section-a">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">程序员工作中</h2>
-        <p class="lead">对着Mac敲代码——是我们日常工作的样子</p>
-      </div>
-      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-        <%= image_tag 'pic-1.jpg', class: 'img-responsive' %>
-      </div>
-    </div>
-  </div>
-</div>
+   <section id="categories">
+ 		<div class="container">
+ 			<h2>职业分类</h2>
 
-<div class="content-section-b">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">活力四射的程序员</h2>
-        <p class="lead">我们也是富有激情活力的年轻人！</p>
-      </div>
-      <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-        <%= image_tag 'pic-2.jpg', class: 'img-responsive' %>
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="decorate-line job"></div>
 
-<div class="content-section-a">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 col-sm-6">
-        <hr class="section-heading-spacer">
-        <div class="clearfix"></div>
-        <h2 class="section-heading">工作之余</h2><h3>一杯咖啡配电影</h3>
-        <p class="lead">程序员也是有生活情趣的一群人</p>
-      </div>
-      <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-        <%= image_tag 'pic-3.jpg', class: 'img-responsive' %>
-      </div>
-    </div>
+      <div  class="container">
+          <div class="row categoriy">
+     				<div class="col-sm-6 col-md-3">
+     			    <div class="thumbnail">
+     			      <%= image_tag("developer.png") %>
+     			      <div class="caption">
+                   <h4><%= link_to("编程开发", jobs_path) %></h4>
+     			      </div>
+     			    </div>
+     			  </div>
+
+     			  <div class="col-sm-6 col-md-3">
+     			    <div class="thumbnail">
+     			      <%= image_tag("customer-service.png") %>
+     			      <div class="caption">
+     			        <h4><%= link_to("服务行业", jobs_path) %></h4>
+     			      </div>
+     			    </div>
+     			  </div>
+
+     			  <div class="col-sm-6 col-md-3">
+     			    <div class="thumbnail">
+     			      <%= image_tag("healthcare.png") %>
+     			      <div class="caption">
+     			        <h4><%= link_to("医疗健康", jobs_path) %></h4>
+     			      </div>
+     			    </div>
+     			  </div>
+
+     				<div class="col-sm-6 col-md-3">
+     			    <div class="thumbnail">
+     			      <%= image_tag("sales-marketing.png") %>
+     			      <div class="caption">
+     			        <h4><%= link_to("市场营销", jobs_path) %></h4>
+     			      </div>
+     			    </div>
+     			  </div>
+     			</div>
+
+     			<div class="row category">
+     				<div class="col-sm-6 col-md-3">
+     			   <div class="thumbnail">
+     			      <%= image_tag("lawyer.png") %>
+     			      <div class="caption">
+     			        <h4><%= link_to("法律", jobs_path) %></h4>
+     			      </div>
+     			    </div>
+     			  </div>
+
+     			  <div class="col-sm-6 col-md-3">
+     			    <div class="thumbnail">
+     			      <%= image_tag("non-profit.png") %>
+     			      <div class="caption">
+     			        <h4><%= link_to("公益事业", jobs_path) %></h4>
+     			      </div>
+     			    </div>
+     			  </div>
+
+     			  <div class="col-sm-6 col-md-3">
+     			    <div class="thumbnail">
+     			      <%= image_tag("reunion.png") %>
+     			      <div class="caption">
+     			        <h4><%= link_to("人力资源", jobs_path) %></h4>
+     			      </div>
+     			    </div>
+     			  </div>
+
+     				<div class="col-sm-6 col-md-3">
+     			    <div class="thumbnail">
+     			      <%= image_tag("design.png") %>
+     			      <div class="caption">
+     			        <h4><%= link_to("设计", jobs_path) %></h4>
+     			      </div>
+     			    </div>
+     			  </div>
+     			</div>
+     		</div>
   </div>
-</div>
+ 	</section>
+
+  <!-- employee said -->
+
+
+  <section id="testimonials" class="sec-testimonials">
+      <div class="container">
+        <h1 class="employee_said">客户反馈</h1>
+
+        <div class="decorate-line job"></div>
+
+        <div class="row">
+          <div class="col-sm-4 employee">
+            <p class="text-center">"OW offer is such amazing. I got my dream work just one week!"</p>
+
+            <p class="text-right">&mdash; Elizabeth</p>
+          </div>
+
+          <div class="col-sm-4 employee">
+            <p class="text-center">"Are you paid fairly? Big boss know your worth? Come here, you'll got them!"</p>
+
+            <p class="text-right">&mdash; Milly Cooper</p>
+          </div>
+
+          <div class="col-sm-4 employee">
+            <p class="text-center">"I have worked with several different people and it always seemed like a pain—luckily I found OW offer. Thanks them!"</p>
+
+            <p class="text-right">&mdash; Jerry Lai</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!--- cooperation company  --->
+
+
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12 trusted-by">合作单位:</div>
+      </div>
+      </div>
+      <div class="decorate-line"></div>
+
+    <div class="container">
+        <div class="row logos">
+            <a href="http://argus-sec.com/"><img src="<%= image_url 'Argus-cbc04f8f2b9.png' %>"/></a>
+            <a href="http://www.boxever.com/"><img src="<%= image_url 'Boxever-cb68bea5910.png' %>"/></a>
+            <a href="https://www.cesanta.com/"><img src="<%= image_url 'cesanta-cb55e32215b.png' %>"/></a>
+            <a href="https://www.coreos.com/"><img src="<%= image_url 'CoreOS-cb87ca3ae0a.png' %>"/></a>
+            <a href="http://www.crononauta.com/"><img src="<%= image_url 'crononauta-cbac536a81e.png' %>"/></a>
+            <a href="https://www.digitalocean.com/"><img src="<%= image_url 'digitalocean-cb08a67adb3.png' %>"/></a>
+            <a href="https://www.docker.com/"><img src="<%= image_url 'Docker-cbed8d5e698.png' %>"/></a>
+            <a href="http://www.ericsson.com/"><img src="<%= image_url 'Ericsson-cbc7b4ff694.png' %>"/></a>
+            <a href="http://www.eurotech.com/"><img src="<%= image_url 'Eurotech-cbb537d2291.png' %>"/></a>
+            <a href="https://www.fosdem.org/"><img src="<%= image_url 'Fosdem-cba89eb91f5.png' %>"/></a>
+            <a href="https://giantswarm.io/"><img src="<%= image_url 'giantswarm-cbd27183f7f.png' %>"/></a>
+            <a href="http://improbable.io/"><img src="<%= image_url 'Improbable-cb7f47b9828.png' %>"/></a>
+            <a href="https://www.jodel-app.com/"><img src="<%= image_url 'Jodel-cbd9d81b36a.png' %>"/></a>
+            <a href="https://www.justwatch.com/"><img src="<%= image_url 'JustWatch-cb2974db5b7.png' %>"/></a>
+            <a href="http://www.mavensecurities.com/"><img src="<%= image_url 'MavenSecurities-cb59382c058.png' %>"/></a>
+            <a href="http://www.outbrain.com/"><img src="<%= image_url 'Outbrain-cba597cf86d.png' %>"/></a>
+            <a href="https://www.percona.com/"><img src="<%= image_url 'Percona-cb5a7682fbc.png' %>"/></a>
+            <a href="https://www.qaware.de/"><img src="<%= image_url 'Qaware-cb43fa8cdb1.png' %>"/></a>
+            <a href="http://www.quobyte.com/"><img src="<%= image_url 'quobyte-cb1c65cc370.png' %>"/></a>
+            <a href="https://www.robustperception.io/"><img src="<%= image_url 'RobustPerception-cb65ad3b2fc.png' %>"/></a>
+            <a href="http://www.showmax.com/"><img src="<%= image_url 'ShowMax-cb1a469a782.png' %>"/></a>
+            <a href="https://www.shuttlecloud.com/"><img src="<%= image_url 'shuttlecloud-cb32e043c91.png' %>"/></a>
+            <a href="https://www.soundcloud.com/"><img src="<%= image_url 'soundcloud-cb3fb09c0c7.png' %>"/></a>
+            <a href="https://www.space.net/"><img src="<%= image_url 'Spacenet-cb561ccaa88.png' %>"/></a>
+            <a href="https://transloadit.com/"><img src="<%= image_url 'transloadit-cb7107a0f8a.png' %>"/></a>
+            <a href="https://www.uda100.com/"><img src="<%= image_url 'WeLearn-cbc41a45958.png' %>"/></a>
+            <a href="https://www.unosoft.hu/"><img src="<%= image_url 'unosoft-cb99b859fed.png' %>"/></a>
+            <a href="https://www.variomedia.de/"><img src="<%= image_url 'variomedia-cb074f416e3.png' %>"/></a>
+            <a href="https://www.weave.works/"><img src="<%= image_url 'weave-cbbb076a3a7.png' %>"/></a>
+        </div>
+      </div>
+
+
+  </body>
+</html>
