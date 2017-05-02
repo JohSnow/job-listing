@@ -1,10 +1,11 @@
 class Admin::JobsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
+  before_action :authenticate_user!
+  before_action :find_job_and_check_permission, only: [:edit, :update]
   before_action :require_is_admin
   layout "admin"
 
   def index
-    @jobs = Job.all
+    @jobs = Job.where(:user => current_user)
   end
 
   def show
@@ -62,5 +63,12 @@ class Admin::JobsController < ApplicationController
     params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :job_location)
   end
 
+  def find_job_and_check_permission
+    @job = Job.find(params[:id])
+
+    if @job.user != current_user
+      redirect_to root_path, alert: "你没有权限进行此操作！"
+    end
+  end
 
 end
