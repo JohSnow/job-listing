@@ -1,4 +1,5 @@
 class Job < ApplicationRecord
+  belongs_to :user
 
   def publish!
     self.is_hidden = false

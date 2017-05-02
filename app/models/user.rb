@@ -9,5 +9,6 @@ class User < ApplicationRecord
   end
 
   has_many :resumes
-  
+  has_many :jobs
+
 end
