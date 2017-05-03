@@ -116,6 +116,18 @@
 }
 
 
+.btn-login {
+    background-color: #59B2E0;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    height: auto;
+    font-weight: normal;
+    padding: 14px 0;
+    text-transform: uppercase;
+    border-color: #59B2E6;
+  }
+
 //---------Navbar---------
 
 .navbar-default {
@@ -591,7 +603,18 @@ h4 {
 
 }
 
-/*===== footer ====*/
+
+
+//=======jobs index=========//
+
+.jobs-page, .show-page, .admin-page, .registor-new, .registor-edit, .password-new, .signIn {
+  background-image: url(https://concat.lietou-static.com/dev/www/pc/revs/v3/build/images/pages/event/landingpage/gain/bg_search11_0f4bfc1e.jpg);
+  background-repeat: repeat-x;
+}
+
+
+
+
 
 
 //---------panel style----------
@@ -612,27 +635,9 @@ h4 {
 }
 
 .panel {
-  margin-top: 70px;
-  margin-bottom: 80px;
+  margin-top: 30px;
 }
 
-//-------马上应征 btn-------
-
- .btn-danger {
-     color: #fff;//字体颜色
-
-     background-color: #EF6C00;//背景颜色
-
-     border-color: #EF6C00;//边框颜色
-
- }
-
- .btn-danger:hover {
-     background-color: #E65100;//鼠标放置在btn上的背景颜色
-
-     border-color: #E65100;//鼠标放置在btn上的边框颜色
-
- }
 
 
  //-------common--------
@@ -641,3 +646,9 @@ h4 {
    float: none;
    margin: 0 auto;
  }
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+
+}

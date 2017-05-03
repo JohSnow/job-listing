@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Job Listing </title>
+        <title>J.W 招聘网 </title>
         <%= csrf_meta_tags %>
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <%= render "common/navbar" %>
             <%= render "common/flashes" %>
-            <div class="row">
+            <div class="row admin-page">
               <div class="col-md-2">
                 <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
                   <li class="active"><%= link_to("Jobs", admin_jobs_path ) %> </li>

@@ -1,13 +1,13 @@
-
-<div class="col-md-8 col-centered">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3><%= @job.title %></h3>
+<div class="container-fluid admin-show">
+  <div class="col-md-8 col-centered">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3><%= @job.title %></h3>
+        </div>
+        <div class="panel-body">
+          <p>
+            <%= simple_format(@job.description) %>
+          </p>
+        </div>
       </div>
-      <div class="panel-body">
-        <p>
-          <%= simple_format(@job.description) %>
-        </p>
-      </div>
-    </div>
-</div>
+  </div>

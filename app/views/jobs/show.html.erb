@@ -1,18 +1,19 @@
+<div class="container-fluid show-page">
+    <div class="col-md-5 col-centered">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3> <%= @job.title %></h3>
+          </div>
+          <div class="panel-body">
+            <p>
+              <%= simple_format(@job.description) %>
 
-<div class="col-md-8 col-centered">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3> <%= @job.title %></h3>
-      </div>
-      <div class="panel-body">
-        <p>
-          <%= simple_format(@job.description) %>
+            </p>
 
-        </p>
-
-        <div  class="text-center">
-          <%= link_to("投递简历", new_job_resume_path(@job), :style => "font-size: 20px; text-decoration: underline;") %>
+            <div  class="text-center">
+              <%= link_to("投递简历", new_job_resume_path(@job), :style => "font-size: 20px; text-decoration: underline;") %>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
 </div>
