@@ -1,20 +1,21 @@
 
+<div class="container-fluid resumes-new">
+    <div class="col-md-6 col-centered">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+              <h3> 投递简历到 <%= @job.title %> </h3>
+          </div>
+          <div class="panel-body">
+            <hr>
 
-<div class="col-md-8 col-centered">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-          <h3> 投递简历到 <%= @job.title %> </h3>
-      </div>
-      <div class="panel-body">
-        <hr>
+            <%= simple_form_for [@job, @resume] do |f| %>
+              <%= f.input :content, :label => "自我推荐" %>
+              <%= f.input :attachment, :label => "简历附件" %>
 
-        <%= simple_form_for [@job, @resume] do |f| %>
-          <%= f.input :content, :label => "自我推荐" %>
-          <%= f.input :attachment, :label => "简历附件" %>
-
-          <%= f.submit "送出" %>
-        <% end %>
+              <%= f.submit "送出" %>
+            <% end %>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
 </div>
