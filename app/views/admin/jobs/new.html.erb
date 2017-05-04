@@ -1,29 +1,10 @@
-<div class="container-fluid admin-new">
-  <div class="row">
-    <div class="col-md-6 col-centered">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3>添加职位</h3>
+<div class="container-fluid admin-edit">
+    <div class="col-md-8 col-centered">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>新增工作</h3>
+          </div>
+          <%= render "form" %>
         </div>
-        <div class="panel-body">
-          <%= simple_form_for [:admin,@job] do |f| %>
-
-          <%= f.input :title, :label => "职位" %>
-          <%= f.input :company_name, :label => "公司"%>
-          <%= f.input :job_location, :label => "工作地点" %>
-          <%= f.input :wage_upper_bound, :label => "薪资待遇" %>
-          <%= f.input :wage_lower_bound, :label => "薪资下限" %>
-
-          <%= f.input :description, :label => "职位介绍" %>
-
-          <%= f.input :contact_email, :label => "企业邮箱"%>
-          <%= f.input :is_hidden, :label => "隐藏职位"%>
-
-            <%= f.submit "提交", class:"btn btn-danger"%>
-          <% end %>
-
-        </div>
-      </div>
     </div>
-  </div>
 </div>
