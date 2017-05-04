@@ -34,6 +34,9 @@ gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+gem 'ransack'
+gem 'seo_helper'
 
 
 group :development, :test do

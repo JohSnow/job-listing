@@ -180,6 +180,12 @@
  }
 
 
+ #search-id {
+   width: 200px;
+   padding-top: 7px;
+
+ }
+
 //------ body -----//
 
 body {
@@ -612,6 +618,30 @@ h4 {
   background-repeat: repeat-x;
 }
 
+
+
+//====== search page ======//
+
+.search-info-title {
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+  color: #0d6ded;
+  font-size: 20px;
+  text-align: center;
+}
+
+.jobs-show0 {
+  border-bottom: 1px dotted #CCC;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+}
+
+.jobs-show {
+  border-bottom: 1px dotted #CCC;
+  padding: 15px;
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+}
 
 
 
