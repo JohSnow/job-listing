@@ -616,10 +616,18 @@ h4 {
 //=======jobs index=========//
 
 .admin-page, .jobs-page {
-  background-image: url(https://concat.lietou-static.com/dev/www/pc/revs/v3/build/images/pages/event/landingpage/gain/bg_search11_0f4bfc1e.jpg);
-  background-repeat: repeat-x;
+  background-image: linear-gradient(#8b9da9, #fff6e4);
 }
 
+.job-box {
+    /* border: 1.5px solid #ddd; */
+    box-shadow: 1px 1px 5px #ccc;
+    margin-top: 12.5px;
+    padding: 15px 200px 1px 70px;
+    /* background-color: #fff; */
+    color: #555;
+    font-size: 16px;
+}
 
 
 //====== search page ======//

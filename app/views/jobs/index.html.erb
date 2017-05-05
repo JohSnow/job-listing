@@ -1,72 +1,65 @@
 
-    <div class="container-fluid">
-          <div class="col-md-8 col-centered">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3>
-                  职位信息
-
-                  <div class="dropdown clearfix pull-right">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        排序
-                          <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-                          <li>
-                            <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
-                          </li>
-                          <li>
-                              <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
-
-                          </li>
-                          <li>
-                            <%= link_to("按照发表时间排序", jobs_path ) %>
-
-                          </li>
-                      </ul>
-                  </div>
-                </div>
-              </h3>
-              <div class="panel-body">
-                <table class="table table-bordered">
-
-                  <thead>
-                        <tr>
-                          <td>职位</td>
-                          <td>工作地点</td>
-                          <td>薪资待遇</td>
-                          <td>公司</td>
-                          <td>发布日期</td>
-                        </tr>
-
-                  </thead>
-                  <% @jobs.each do |job| %>
-                  <tr>
-
-                    <td>
-                      <%= link_to(job.title, job_path(job)) %>
-                    </td>
-                    <td>
-                      <%= job.job_location %>
-                    </td>
-                    <td>
-                      <%= job.wage_lower_bound %>元 ~ <%= job.wage_upper_bound %> 元
-                    </td>
-                    <td>
-                      <%= job.company_name %>
-                    </td>
-                    <td>
-                      <%= job.created_at.to_date %>
-                    </td>
-                  </tr>
-                  <% end %>
-                </table>
-
-                <div class="text-center">
-                  <%= will_paginate @jobs %>
-                </div>
-
-              </div>
-          </div>
-        </div>
+    <br>
+    <div class="container-fluid col-md-12">
+      <div class="row">
+    <div class="col-md-2 dropdown clearfix pull-right">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        排序
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuDiviver">
+        <li><%= link_to("按薪金上限排序", jobs_path(:order => 'by_upper_bound')) %></li>
+        <li><%= link_to("按薪金下限排序", jobs_path(:order => 'by_lower_bound')) %></li>
+        <li><%= link_to("按发布时间排序", jobs_path)%> </li>
+      </ul>
     </div>
+    </div>
+
+    <div class="text-center">
+      <h1><strong>职位列表</strong></h1>
+    </div>
+
+    <div class="row ">
+        <!-- 项目列表 -->
+        <div class="container job-content">
+            <% @jobs.each do |job| %>
+              <div class="job-box">
+                <!-- 有职位资料时 -->
+                <% if @jobs.length > 0 %>
+                <div class="clearfix pull-right">
+
+                    <%= link_to("一键投递", new_job_resume_path(job), class: "btn btn-info btn-sm", method: :get)%>
+
+                </div>
+                    <div >
+                        <h4><strong><%= link_to(job.title, job_path(job)) %></strong></h4>
+                    </div>
+                    <div >
+                        <p><%= link_to( "了解详情", job_path(job)) %></p>
+                    </div>
+                    <div>
+                        <p></p>
+                        <p>
+                          <sapn class="fa fa-map-marker"></sapn> <%= job.job_location %>
+                          <span class="label label-success"><%= job.wage_lower_bound %>元</span> - <span class="label label-success"><%= job.wage_upper_bound %>元</span>|
+                          <sapn class="fa fa-calendar"></sapn> <%= job.created_at.to_date %>|
+                          <sapn class="fa fa-tags">Tags : <span class="label label-info"><%= job.company_name %></span>
+                    </p>
+                </div>
+
+            <% else %>
+            <!-- 没有职位资料 -->
+                <div >
+                    <h2>此分类暂时没有招聘职位哦，请尝试其他选项。</h2>
+                </div>
+            <% end %>  <!--结束判断 -->
+          </div> <!--结束@jobs循环-->
+        <% end %>
+    </div>
+  </div>
+  </div>
+
+  <br><br>
+<div class="text-center">
+      <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+</div>
