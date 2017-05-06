@@ -8,6 +8,7 @@
     <%= f.input :wage_lower_bound, :label => "薪资下限" %>
     <%= f.input :description, :label => "职位介绍" %>
     <%= f.input :contact_email, :label => "企业邮箱"%>
+    <%= f.select :category_id, @categories %>
     <%= f.input :is_hidden, :label => "隐藏职位"%>
 
       <%= f.submit "提交", class:"btn btn-danger"%>

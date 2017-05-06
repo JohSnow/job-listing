@@ -5,7 +5,20 @@
             <h3>新增工作</h3>
           </div>
           <div class="panel-body">
-            <%= render "form" %>
+            <%= simple_form_for [:admin, @job ] do |f| %>
+
+              <%= f.input :title, :label => "职位" %>
+              <%= f.input :company_name, :label => "公司"%>
+              <%= f.input :job_location, :label => "工作地点" %>
+              <%= f.input :wage_upper_bound, :label => "薪资上限" %>
+              <%= f.input :wage_lower_bound, :label => "薪资下限" %>
+              <%= f.input :description, :label => "职位介绍" %>
+              <%= f.input :contact_email, :label => "企业邮箱"%>
+              <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别") %>
+              <%= f.input :is_hidden, :label => "隐藏职位"%>
+
+                <%= f.submit "提交", class:"btn btn-danger"%>
+            <% end %>
           </div>
         </div>
     </div>

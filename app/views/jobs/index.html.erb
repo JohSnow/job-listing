@@ -4,7 +4,7 @@
     <div class="text-center">
       <h1><strong>职位列表</strong></h1>
     </div>
-    
+
     <div class="container-fluid col-md-12">
       <div class="row">
     <div class="col-md-2 dropdown clearfix pull-right">
@@ -46,7 +46,8 @@
                           <sapn class="fa fa-map-marker"></sapn> <%= job.job_location %>
                           <span class="label label-success"><%= job.wage_lower_bound %>元</span> - <span class="label label-success"><%= job.wage_upper_bound %>元</span>|
                           <sapn class="fa fa-calendar"></sapn> <%= job.created_at.to_date %>|
-                          <sapn class="fa fa-tags">Tags : <span class="label label-info"><%= job.company_name %></span>
+                          <sapn class="fa fa-tags">Tags : <span class="label label-info"><%= job.company_name %> </span>
+                            <a href="#"><span class="label label-success"><%= job.category.name %></span></a>
                     </p>
                 </div>
 

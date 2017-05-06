@@ -1,5 +1,6 @@
 class Job < ApplicationRecord
   belongs_to :user
+  belongs_to :category
 
   def publish!
     self.is_hidden = false
