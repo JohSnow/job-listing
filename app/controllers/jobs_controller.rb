@@ -61,35 +61,35 @@ class JobsController < ApplicationController
   end
 
   def developer
-    @jobs = Job.published.where(:category_id => "IT行业").recent.paginate(:page => params[:page], :per_page => 5)
-  end
-
-  def healthcare
-    @jobs =  Job.published.where(:category => "医疗健康").recent.paginate(:page => params[:page], :per_page => 5)
+    @jobs = Job.published.where(:category_id => 1).recent.paginate(:page => params[:page], :per_page => 5)
   end
 
   def customer_service
-    @jobs = Job.published.where(:category => "服务行业").recent.paginate(:page => params[:page], :per_page => 5)
+    @jobs = Job.published.where(:category_id => 2).recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def healthcare
+    @jobs =  Job.published.where(:category_id => 3).recent.paginate(:page => params[:page], :per_page => 5)
   end
 
   def sales_marketing
-    @jobs = Job.published.where(:category => "市场营销").recent.paginate(:page => params[:page], :per_page => 5)
+    @jobs = Job.published.where(:category_id => 4).recent.paginate(:page => params[:page], :per_page => 5)
   end
 
   def legal
-    @jobs = Job.published.where(:category => "法律").recent.paginate(:page => params[:page], :per_page => 5)
+    @jobs = Job.published.where(:category_id => 5).recent.paginate(:page => params[:page], :per_page => 5)
   end
 
   def non_profit
-    @jobs = Job.published.where(:category => "公益事业").recent.paginate(:page => params[:page], :per_page => 5)
+    @jobs = Job.published.where(:category_id => 6).recent.paginate(:page => params[:page], :per_page => 5)
   end
 
   def human_resource
-    @jobs = Job.published.where(:category => "人力资源").recent.paginate(:page => params[:page], :per_page => 5)
+    @jobs = Job.published.where(:category_id => 7).recent.paginate(:page => params[:page], :per_page => 5)
   end
 
   def design
-    @jobs = Job.published.where(:category => "设计").recent.paginate(:page => params[:page], :per_page => 5)
+    @jobs = Job.published.where(:category_id => 8).recent.paginate(:page => params[:page], :per_page => 5)
   end
 
 
