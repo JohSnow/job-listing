@@ -60,6 +60,39 @@ class JobsController < ApplicationController
     redirect_to jobs_path
   end
 
+  def developer
+    @jobs = Job.published.where(:category_id => "IT行业").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def healthcare
+    @jobs =  Job.published.where(:category => "医疗健康").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def customer_service
+    @jobs = Job.published.where(:category => "服务行业").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def sales_marketing
+    @jobs = Job.published.where(:category => "市场营销").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def legal
+    @jobs = Job.published.where(:category => "法律").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def non_profit
+    @jobs = Job.published.where(:category => "公益事业").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def human_resource
+    @jobs = Job.published.where(:category => "人力资源").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+  def design
+    @jobs = Job.published.where(:category => "设计").recent.paginate(:page => params[:page], :per_page => 5)
+  end
+
+
   def search
       if @query_string.present?
         search_result = Job.published.ransack(@search_criteria).result(:distinct => true)
@@ -83,7 +116,7 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :job_location, :category_id)
+    params.require(:job).permit(:title, :description, :wage_upper_bound, :wage_lower_bound, :contact_email, :is_hidden, :job_location, :category_id_id)
   end
 
 
